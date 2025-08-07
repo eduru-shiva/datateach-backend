@@ -1,0 +1,60 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Error: That IP address can't be assigned to.
+Invalid HTTP_HOST header: '3.109.202.86:8000'. You may need to add '3.109.202.86' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/datateach-backend/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/datateach-backend/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/datateach-backend/env/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/datateach-backend/env/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '3.109.202.86:8000'. You may need to add '3.109.202.86' to ALLOWED_HOSTS.
+[07/Aug/2025 10:32:39] "GET / HTTP/1.1" 400 63857
+Invalid HTTP_HOST header: '3.109.202.86:8000'. You may need to add '3.109.202.86' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/datateach-backend/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/datateach-backend/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/datateach-backend/env/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/datateach-backend/env/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '3.109.202.86:8000'. You may need to add '3.109.202.86' to ALLOWED_HOSTS.
+[07/Aug/2025 10:32:40] "GET /favicon.ico HTTP/1.1" 400 63913
+/home/ubuntu/datateach-backend/backend_app/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 07, 2025 - 10:31:34
+Django version 5.2.5, using settings 'backend_app.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Error: That IP address can't be assigned to.
+Not Found: /
+[07/Aug/2025 10:35:55] "GET / HTTP/1.1" 404 2312
+Not Found: /favicon.ico
+[07/Aug/2025 10:35:59] "GET /favicon.ico HTTP/1.1" 404 2363
+[07/Aug/2025 10:36:21] "GET /api/test/ HTTP/1.1" 200 43
+Not Found: /
+[07/Aug/2025 10:36:40] "GET / HTTP/1.1" 404 2312
+[07/Aug/2025 10:42:45] "GET /api/test/ HTTP/1.1" 200 43
+[07/Aug/2025 10:42:47] "GET /api/test/ HTTP/1.1" 200 43
+[07/Aug/2025 10:42:48] "GET /api/test/ HTTP/1.1" 200 43
+[07/Aug/2025 10:42:49] "GET /api/test/ HTTP/1.1" 200 43
+Not Found: /
+[07/Aug/2025 10:42:55] "GET / HTTP/1.1" 404 2312
