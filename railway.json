@@ -1,8 +1,4 @@
-{
+{ 
   "buildCommand": "pip install -r requirements.txt",
   "startCommand": "python manage.py migrate && python manage.py runserver 0.0.0.0:$PORT"
-}
-{
-  "buildCommand": "pip install -r requirements.txt",
-  "startCommand": "python manage.py migrate && python manage.py runserver 3.109.202.86:$8000"
 }
