@@ -1,0 +1,9 @@
+[tool.poetry]
+name = "datateach-backend"
+version = "0.1.0"
+description = "Django backend for DataTeach"
+authors = ["Shiva <shivashankarprasad14@gmail.com>"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
