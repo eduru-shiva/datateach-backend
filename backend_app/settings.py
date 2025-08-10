@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-mk+f^g581eobdc8%uzatxq=6%dxvoj-n2112%ob&z=yjl7mt!a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["datateach-backend-production.up.railway.app", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
