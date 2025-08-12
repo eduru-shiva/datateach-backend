@@ -1,39 +1,39 @@
+import os
 from pathlib import Path
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'your-secret-key-here'
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'p#hdd&pc^4e3j$0fr+p8h#or6)&r9sx*!^5s^$omis39#$*7j4'
 
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Allow Railway backend domain + EC2 public IP + Localhost + Render frontend domain
 ALLOWED_HOSTS = [
+    'datateach-backend-production-df65.up.railway.app',
     'localhost',
     '127.0.0.1',
-    'datateach-backend-production-df65.up.railway.app',  # Railway backend domain
+    '3.109.158.53',  # EC2 public IP if needed
 ]
 
-# Installed Apps
+# Application definition
 INSTALLED_APPS = [
-    # Django default apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # Third-party apps
-    'corsheaders',
-
-    # Your apps
-    'backend_app',  # change if your app folder name is different
+    'corsheaders',   # for frontend-backend communication
+    'api',           # your app
 ]
 
-# Middleware
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # must be at the top
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # CORS middleware
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -41,7 +41,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'backend_app.urls'  # change if your project folder is different
+ROOT_URLCONF = 'backend_app.urls'
 
 TEMPLATES = [
     {
@@ -59,7 +59,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'backend_app.wsgi.application'  # change if project folder different
+WSGI_APPLICATION = 'backend_app.wsgi.application'
 
 # Database
 DATABASES = {
@@ -83,10 +83,11 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files
-STATIC_URL = 'static/'
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
 
+# Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS settings
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True  # Allow all origins for now (can be restricted to your frontend domain later)
